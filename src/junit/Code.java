@@ -23,7 +23,18 @@ public class Code {
     }
 
     public static int sumIgnoringDuplicates(int[] integers) {
-        return 0;
+        if (integers == null) {
+            return 0;
+        }
+
+        int[] unique = removeDuplicates(integers);
+
+        int sum = 0;
+        for (int value : unique) {
+            sum += value;
+        }
+
+        return sum;
     }
 
 }
